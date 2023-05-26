@@ -1,38 +1,55 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.formInputWrapper {
+  display: flex;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formLabel {
+  width: 5.4rem;
+}
+
+.formInput {
+  flex-grow: 1;
+}
+
+.TodoForm {
+  width: calc(100% - 0.4rem);
+  max-width: 600px;
+}
+
+.TodoList {
+  width: calc(100% - 0.4rem);
+  max-width: 600px;
+  flex-grow: 1;
+}
+
+.Todo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2rem 1.4rem 1.4rem auto;
+}
+
+.Todo-mainSection {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  background-color: #eee;
+}
+
+.Todo-label {
+  flex-grow: 1;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
